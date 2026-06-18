@@ -1,8 +1,12 @@
-
+import Hero from '../../components/Hero'
+import RestauranteList from '../../components/RestauranteList'
 
 const Home = () => {
     return (
-        <h1>hola</h1>
+        <>
+            <Hero />
+            <RestauranteList />
+        </>
     )
 }
 
