@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const ProductList = styled.div`
+    background-color: #FFF8F2;
+`
+
 export const ProductsContainer = styled.div`
     padding: 60px 0;
     display: grid;

@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const BTNInfo = styled.button`
-    color: #FFEBD9;
-    background-color: #E66767;
-    width: 84px;
-    height: 24px;
-    border: none;
-`
-
 export const RestauranteContainer = styled.div`
     display: grid;
     padding: 0 270px;
@@ -17,17 +9,20 @@ export const RestauranteContainer = styled.div`
 `
 
 export const RestauranteInfo = styled.div`
-    margin: 20px;
-    padding: 0 18px;
+    margin: 30px 18px;
     max-width: 472px;
-    height: 398px;
+    align-items: center;
     background-color: #FFFFFF;
 
     img {
         width: 472px;
         height: 217px;
     }
+`
 
+export const RestauranteDescription = styled.div`
+    padding: 20px;
+    
     h1 {
         font-weight: 700;
         font-style: bold;
