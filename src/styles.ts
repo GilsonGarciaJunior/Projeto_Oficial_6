@@ -16,4 +16,8 @@ export const GlobalCss= createGlobalStyle`
     width: 100%;
     margin: 0 auto
   }
+
+  body {
+    background-color: #FFF8F2;
+  }
 `

@@ -3,12 +3,9 @@ import FundoImg from "../../assets/FundoApresentação.jpg"
 
 export const ApresentaçãoContainer = styled.div`
     display: flex;
-    flex-direction: column;
     background-image: url(${FundoImg});
     position: relative;
     background-size: cover;
-    padding: 0 400px;
-    justify-content: space-between;
     max-width: 100%;
     height: 280px;
 
@@ -28,6 +25,15 @@ export const ApresentaçãoContainer = styled.div`
         color: #FFFFFF;
         z-index: 1;
     }
+`
+
+export const ApresentaçãoInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1024px;
 `
 
 export const TituloPrincipal = styled.h1`
