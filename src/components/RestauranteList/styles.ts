@@ -84,3 +84,17 @@ export const RestauranteDescription = styled.div`
         padding-bottom: 24px;
     }
 `
+
+export const Title = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const Nota = styled.div`
+    display: flex;
+
+    img {
+        width: 21px;
+        height: 21px;
+    }
+`

@@ -23,6 +23,6 @@ export const HeaderInfo = styled.div`
 
     h1 {
         font-weight: 900;
-        font-size: 24px;
+        font-size: 18px;
     }
 `
