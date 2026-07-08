@@ -41,7 +41,7 @@ export const Tag = styled.span`
 `;
 
 export const RestauranteListagem = styled.ul`
-    margin-top: 80px;
+    margin: 80px 0;
     justify-content: center;
     align-items: center;
     max-width: 1024px;
