@@ -17,10 +17,9 @@ export const Products = styled.ul`
 `
 
 export const Product = styled.li`
-    display: block;
+    display: flex;
+    flex-direction: column;
     background-color: #E66767;
-    max-width: 320px;
-    max-height: 338px;
     padding: 8px;
 
     img {
@@ -30,20 +29,19 @@ export const Product = styled.li`
     
     h1 {
         color: #FFEBD9;
-        margin-bottom: 8px;
+        margin: 8px 0;
         font-size: 16px;
         font-weight: bold;
     }
 
     p {
         color: #FFEBD9;
-        margin-bottom: 8px;
         line-height: 22px;
-        letter-spacing: 0px;
         font-size: 14px;
     }
 
     button {
+        margin-top: auto;
         width: 100%;
         height: 24px;
         background-color: #FFEBD9;

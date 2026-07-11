@@ -1,7 +1,16 @@
-import RestauranteCard from '../../../models/CardRestaurante'
-import { RestauranteDescription, Restaurante, RestauranteTag, Tag, TagInfo, Title, Nota } from "../styles"
-import { ButtonLink } from "../../Buttons/styles"
-import NotaImg from "../../../assets/estrela.png"
+import { RestauranteCard } from '../../../models/CardRestaurante'
+import {
+    RestauranteDescription,
+    RestauranteTag,
+    Restaurante,
+    Tag,
+    TagInfo,
+    Title,
+    Nota
+} from '../styles'
+
+import { ButtonLink } from '../../Buttons/styles'
+import NotaImg from '../../../assets/estrela.png'
 
 type Props = {
     restaurante: RestauranteCard
@@ -12,27 +21,27 @@ const CardRestaurante = ({ restaurante }: Props) => {
         <Restaurante>
             <RestauranteTag>
                 <img
-                src={restaurante.foto}
-                alt={restaurante.titulo}
+                    src={restaurante.capa}
+                    alt={restaurante.titulo}
                 />
                 <TagInfo>
-                    {restaurante.destaque && (
-                        <Tag>{restaurante.destaque}</Tag>
+                    {restaurante.destacado && (
+                        <Tag>Destaque da Semana</Tag>
                     )}
-                    <Tag>{restaurante.categoria}</Tag>
+                    <Tag>{restaurante.tipo}</Tag>
                 </TagInfo>
             </RestauranteTag>
             <RestauranteDescription>
                 <Title>
                     <h1>{restaurante.titulo}</h1>
                     <Nota>
-                        <h1>{restaurante.nota}</h1>
+                        <h1>{restaurante.avaliacao}</h1>
                         <img src={NotaImg} alt="" />
                     </Nota>
                 </Title>
                 <p>{restaurante.descricao}</p>
-                <ButtonLink to="/Perfil">
-                Saiba Mais
+                <ButtonLink to={`/Perfil/${restaurante.id}`}>
+                    Saiba Mais
                 </ButtonLink>
             </RestauranteDescription>
         </Restaurante>

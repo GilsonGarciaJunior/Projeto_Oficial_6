@@ -21,8 +21,17 @@ export const HeaderInfo = styled.div`
         height: 57px;
     }
 
-    h1 {
-        font-weight: 900;
-        font-size: 18px;
+    a {
+        text-decoration: none;
+        color: #E66767;
+        font-weight: bold;
     }
+`
+
+export const CarrinhoButton = styled.button`
+    background: transparent;
+    border: none;
+    color: #E66767;
+    font-weight: bold;
+    cursor: pointer;
 `

@@ -1,15 +1,17 @@
 import { RestauranteContainer, RestauranteListagem, RestauranteInfo } from "./styles"
-import RestauranteItems from "./RestauranteItems"
+import RestauranteItems  from "./RestauranteItems"
 import { useEffect, useState } from 'react'
+import { RestauranteCard } from "../../models/CardRestaurante"
 
 const RestauranteList = () => {
-    const [Restaurantes, setRestaurantes] = useState([])
+
+    const [restaurantes, setRestaurantes] = useState<RestauranteCard[]>([])
     
     useEffect(() => {
         fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
-            .then((resposta) => resposta.json())
-            .then((dados) => {
-                setRestaurantes(dados)
+            .then((res) => res.json())
+            .then((data: RestauranteCard[]) => {
+                setRestaurantes(data)
             })
     }, [])
 
@@ -17,15 +19,10 @@ const RestauranteList = () => {
         <RestauranteContainer className="container">
             <RestauranteInfo>
                 <RestauranteListagem>
-                    {Restaurantes.map((item) => (
+                    {restaurantes.map((restaurante) => (
                         <RestauranteItems
-                            key={item.id}
-                            nome={item.titulo}
-                            imagem={item.capa}
-                            descricao={item.descricao}
-                            categoria={item.tipo}
-                            nota={item.avaliacao}
-                            destaque={item.destacado}
+                            key={restaurante.id}
+                            restaurante={restaurante}
                         />
                     ))}
                 </RestauranteListagem>
