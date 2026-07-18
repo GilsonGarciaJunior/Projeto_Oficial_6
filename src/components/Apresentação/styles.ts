@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import FundoImg from "../../assets/FundoApresentação.jpg"
 
 export const ApresentaçãoContainer = styled.div`
     display: flex;
-    background-image: url(${FundoImg});
     position: relative;
     background-size: cover;
     max-width: 100%;

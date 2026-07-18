@@ -8,31 +8,37 @@ type CarrinhoState = {
 
 const initialState: CarrinhoState = {
     items: [],
-    isOpen: true
+    isOpen: false
 }
 
 const CarrinhoSlice = createSlice({
     name: 'cart',
-
     initialState,
-
     reducers: {
         add(state, action: PayloadAction<Produto>) {
-        state.items.push(action.payload)
+            const existe = state.items.find(
+                item => item.id === action.payload.id
+            )
+            if (!existe) {
+                state.items.push(action.payload)
+            }
+            state.isOpen = true
         },
 
         open(state) {
             state.isOpen = true
         },
-
+        close(state) {
+            state.isOpen = false
+        },
         remove(state, action: PayloadAction<number>) {
-        state.items = state.items.filter(
-            (item) => item.id !== action.payload
-        )
+            state.items = state.items.filter(
+                (item) => item.id !== action.payload
+            )
         }
     }
 })
 
-export const { add, remove, open } = CarrinhoSlice.actions
+export const { add, remove, open, close } = CarrinhoSlice.actions
 
 export default CarrinhoSlice.reducer

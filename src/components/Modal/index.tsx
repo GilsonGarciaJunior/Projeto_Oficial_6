@@ -28,7 +28,10 @@ const Modal = ({ produto, fechar }: Props) => {
                     <p>
                         Serve: {produto.porcao}
                     </p>
-                    <BotaoCarrinho onClick={() => dispatch(add(produto))}>
+                    <BotaoCarrinho onClick={() => {
+                        dispatch(add(produto))
+                        fechar()
+                    }}>
                         Adicionar ao carrinho - R$ {produto.preco.toFixed(2)}
                     </BotaoCarrinho>
                 </Conteudo>
