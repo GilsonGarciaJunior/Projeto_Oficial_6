@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store'
 import { close, remove } from '../../store/Reducers/Carrinho'
+import Lixeira from '../../assets/lixeira-de-reciclagem.png'
 
 import {
     Overlay,
@@ -40,13 +41,15 @@ const Carrinho = () => {
                         <span>
                             R$ {item.preco.toFixed(2)}
                         </span>
-                        <BotaoRemover
-                            onClick={() => dispatch(remove(item.id))}
-                        >
-                            Remover
-                        </BotaoRemover>
+                        
                     </div>
+                    <BotaoRemover
+                        onClick={() => dispatch(remove(item.id))}
+                    >
+                        <img src={Lixeira} alt="Remover produto" />
+                    </BotaoRemover>
                 </CartItem>
+                
                 ))}
                 <Total>
                     <span>Valor total</span>

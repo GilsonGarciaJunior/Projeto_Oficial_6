@@ -44,11 +44,18 @@ export const CartItem = styled.div`
 `
 
 export const BotaoRemover = styled.button`
+    display: flex;
     border: none;
     cursor: pointer;
-    padding: 4px 8px;
-    background: #e66767;
-    color: #ffe8d9;
+    background-color: #ffe8d9;
+    justify-content: end;
+    align-items: flex-end;
+    width: 40px;
+
+    img {
+        width: 16px;
+        height: 16px;
+    }
 `
 
 export const Total = styled.div`
