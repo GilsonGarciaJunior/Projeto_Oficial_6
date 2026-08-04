@@ -1,4 +1,4 @@
-import { RestauranteCard } from '../../../models/CardRestaurante'
+import { RestauranteCard } from '../../../types'
 import {
     RestauranteDescription,
     RestauranteTag,

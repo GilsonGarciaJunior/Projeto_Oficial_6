@@ -1,3 +1,4 @@
+import { RestauranteCard } from '../../types'
 import {
     ApresentaçãoContainer,
     ApresentaçãoInfo,
@@ -5,7 +6,6 @@ import {
     TituloSecundario
 } from './styles'
 
-import { RestauranteCard } from '../../models/CardRestaurante'
 
 type Props = {
     restaurante: RestauranteCard

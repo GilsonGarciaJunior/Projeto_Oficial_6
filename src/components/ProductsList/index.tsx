@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Produto } from "../../models/CardRestaurante"
+import { Produto } from "../../types"
 import { Product, Products, ProductsContainer, ProductList } from "./styles"
 import Modal from "../Modal"
 

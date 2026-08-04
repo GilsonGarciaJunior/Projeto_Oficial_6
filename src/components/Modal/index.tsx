@@ -1,4 +1,4 @@
-import { Produto } from '../../models/CardRestaurante'
+import { Produto } from '../../types'
 import { BotaoCarrinho, Conteudo, Fechar, ModalContainer, Overlay } from './styles'
 import { useDispatch } from 'react-redux'
 import { add } from '../../store/Reducers/Carrinho'
