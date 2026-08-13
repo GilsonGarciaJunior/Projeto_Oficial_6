@@ -26,6 +26,32 @@ export const HeaderInfo = styled.div`
         color: #E66767;
         font-weight: bold;
     }
+
+    @media (max-width: 1080px) {
+        padding: 0 16px;
+    }
+
+    @media (max-width: 700px) {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+
+        padding: 0 12px;
+
+        img {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            width: 100px;
+            height: auto;
+        }
+
+        a {
+            grid-column: 2;
+            grid-row: 1;
+            justify-self: end;
+            font-size: 14px;
+        }
+    }
 `
 
 export const CarrinhoButton = styled.button`
@@ -34,4 +60,12 @@ export const CarrinhoButton = styled.button`
     color: #E66767;
     font-weight: bold;
     cursor: pointer;
+
+    @media (max-width: 700px) {
+        grid-column: 2;
+        grid-row: 2;
+
+        justify-self: end;
+        font-size: 14px;
+    }
 `

@@ -36,8 +36,7 @@ export const InputGroup = styled.div`
 export const MaskedInput = styled(IMaskInput)<{ $error?: boolean }>`
     width: 100%;
     padding: 8px;
-    border: 2px solid ${({ $error }) =>
-        $error ? '#f02121' : '#e66767'};
+    border: 2px solid ${({ $error }) => $error ? '#f02121' : '#e66767'};
 `
 
 export const Row = styled.div`

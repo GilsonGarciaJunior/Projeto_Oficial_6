@@ -48,6 +48,18 @@ export const RestauranteListagem = styled.ul`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+
+    @media (max-width: 1024px) {
+        margin: 40px 0;
+        max-width: 768px;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        gap: 16px;
+    }
 `
 
 export const Restaurante = styled.li`
@@ -59,6 +71,24 @@ export const Restaurante = styled.li`
     img {
         width: 472px;
         height: 217px;
+    }
+
+    @media (max-width: 1100px) {
+        max-width: 400px;
+
+        img {
+            width: 400px;
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        max-width: 280px;
+
+        img {
+            width: 280px;
+            height: 150px;
+        }
     }
 `
 

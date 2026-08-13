@@ -48,7 +48,7 @@ const Entrega = ({ avancar, voltar }: EntregaProps) => {
         complemento: Yup.string(),
         cidade: Yup.string().required(),
         cep: Yup.string().length(9, 'CEP inválido').required(),
-        numero: Yup.string().length(14, 'Número inválido').required()
+        numero: Yup.string().length(5, 'Número inválido').required()
     })
 
     return (
@@ -121,7 +121,7 @@ const Entrega = ({ avancar, voltar }: EntregaProps) => {
                                     <Field name="numero">
                                         {({ field, form, meta }: any) => (
                                             <MaskedInput
-                                                mask="(00) 0000-0000"
+                                                mask="000-*"
                                                 value={field.value}
                                                 onAccept={(value) => form.setFieldValue(field.name, value)}
                                                 onBlur={field.onBlur}

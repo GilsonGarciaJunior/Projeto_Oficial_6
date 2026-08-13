@@ -12,10 +12,16 @@ export const FooterContainer = styled.div`
 export const FooterInfo = styled.div`
     padding-top: 30px;
     width: 480px;
+    text-align: center;
+    align-items: center;
 
     p {
         font-weight: 400;
         font-size: 10px;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
     }
 `
 
@@ -24,7 +30,7 @@ export const RedesSociais = styled.div`
     justify-content: center;
     background-color: #fff;
     padding: 20px 0;
-    margin: 40px 190px;
+    margin: 40px auto;
     width: 100px;
     border-radius: 14px;
 

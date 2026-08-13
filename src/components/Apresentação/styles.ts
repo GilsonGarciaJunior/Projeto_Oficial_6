@@ -32,6 +32,10 @@ export const ApresentaçãoInfo = styled.div`
     margin: 0 auto;
     width: 100%;
     max-width: 1024px;
+
+    @media (max-width: 1120px){
+        width: 80%;
+    }
 `
 
 export const TituloPrincipal = styled.h1`

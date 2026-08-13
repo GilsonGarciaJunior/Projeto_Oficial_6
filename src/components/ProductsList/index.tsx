@@ -13,8 +13,8 @@ const ProductsList = ({produtos}: Props) => {
 
     return(
         <ProductList>
-            <ProductsContainer className="container">
-                    <Products className="containerPerfl">
+            <ProductsContainer>
+                    <Products>
                         {produtos.map((produto) => (
                             <Product
                                 key={produto.id}
