@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import FundoImg from "../../assets/FundoApresentação.jpg"
 
 export const ApresentaçãoContainer = styled.div`
     display: flex;
-    background-image: url(${FundoImg});
     position: relative;
     background-size: cover;
     max-width: 100%;
@@ -34,6 +32,10 @@ export const ApresentaçãoInfo = styled.div`
     margin: 0 auto;
     width: 100%;
     max-width: 1024px;
+
+    @media (max-width: 1120px){
+        width: 80%;
+    }
 `
 
 export const TituloPrincipal = styled.h1`

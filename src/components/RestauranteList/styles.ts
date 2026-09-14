@@ -41,13 +41,25 @@ export const Tag = styled.span`
 `;
 
 export const RestauranteListagem = styled.ul`
-    margin-top: 80px;
+    margin: 80px 0;
     justify-content: center;
     align-items: center;
     max-width: 1024px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+
+    @media (max-width: 1024px) {
+        margin: 40px 0;
+        max-width: 768px;
+        gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        gap: 16px;
+    }
 `
 
 export const Restaurante = styled.li`
@@ -59,6 +71,24 @@ export const Restaurante = styled.li`
     img {
         width: 472px;
         height: 217px;
+    }
+
+    @media (max-width: 1100px) {
+        max-width: 400px;
+
+        img {
+            width: 400px;
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        max-width: 280px;
+
+        img {
+            width: 280px;
+            height: 150px;
+        }
     }
 `
 
@@ -82,5 +112,19 @@ export const RestauranteDescription = styled.div`
         font-weight: 400px;
         font-size: 14px;
         padding-bottom: 24px;
+    }
+`
+
+export const Title = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const Nota = styled.div`
+    display: flex;
+
+    img {
+        width: 21px;
+        height: 21px;
     }
 `

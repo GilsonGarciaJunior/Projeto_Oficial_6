@@ -1,14 +1,29 @@
-import { ApresentaçãoContainer, ApresentaçãoInfo, TituloPrincipal, TituloSecundario } from "./styles"
+import { RestauranteCard } from '../../types'
+import {
+    ApresentaçãoContainer,
+    ApresentaçãoInfo,
+    TituloPrincipal,
+    TituloSecundario
+} from './styles'
 
-const Apresentação = () => {
+
+type Props = {
+    restaurante: RestauranteCard
+}
+
+const Apresentacao = ({ restaurante }: Props) => {
     return (
-        <ApresentaçãoContainer className="container">
+        <ApresentaçãoContainer style={{ backgroundImage: `url(${restaurante.capa})` }}>
             <ApresentaçãoInfo>
-                <TituloPrincipal>Italiana</TituloPrincipal>
-                <TituloSecundario>La Dolce Vita Trattoria</TituloSecundario>
+                <TituloPrincipal>
+                    {restaurante.tipo}
+                </TituloPrincipal>
+                <TituloSecundario>
+                    {restaurante.titulo}
+                </TituloSecundario>
             </ApresentaçãoInfo>
         </ApresentaçãoContainer>
     )
 }
 
-export default Apresentação
+export default Apresentacao

@@ -1,13 +1,28 @@
 import LogoImg from "../../assets/logo.jpeg"
-import { HeaderContainer, HeaderInfo } from "./styles"
+import { CarrinhoButton, HeaderContainer, HeaderInfo } from "./styles"
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store'
+import { useDispatch } from 'react-redux'
+import { open } from '../../store/Reducers/Carrinho'
 
 const Header = () => {
+    const itens = useSelector(
+        (state: RootState) => state.Carrinho.items
+    )
+
+    const dispatch = useDispatch()
+
     return (
         <HeaderContainer className="container">
             <HeaderInfo>
-                <h1>Restaurantes</h1>
+                <Link to="/">
+                    Restaurantes
+                </Link>
                 <img src={LogoImg} alt="Logo do Efood" />
-                <h1>0 produto(s) no carrinho</h1>
+                <CarrinhoButton  onClick={() => dispatch(open())}>
+                    {itens.length} produto(s) no carrinho
+                </CarrinhoButton>
             </HeaderInfo>            
         </HeaderContainer>
     )

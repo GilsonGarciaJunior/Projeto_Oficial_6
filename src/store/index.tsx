@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 
+import Carrinho from './Reducers/Carrinho'
+import Checkout from './Reducers/Checkout'
+
 const store = configureStore({
     reducer: {
+        Carrinho: Carrinho,
+        Checkout: Checkout
     }
 })
 

@@ -23,4 +23,10 @@ export const HeroTitle = styled.h1`
     font-weight: 900;
     max-width: 539px;
     text-align: center;
+
+    @media (max-width: 480px){
+        margin-top: 80px;
+        font-size: 32px;
+        max-width: 500px;
+    }
 `
